@@ -16,6 +16,22 @@ let productsController = {
       }
       res.json(products)
       // res.render('products')
+    },
+    create: function(req,res){
+      
+      const body = req.body;
+        // console.log(body)
+      const newProduct = {
+        id: faker.datatype.uuid(),
+        ...body
+      }
+      // const newProduct = await service.create(body)
+      res.status(201).json(
+        {
+            newProduct
+        }
+      )
+      
     }
 }
 module.exports = productsController;
