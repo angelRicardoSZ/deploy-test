@@ -7,7 +7,11 @@ router.get('/',productsController.list);
 
 router.post('/new',productsController.create);
 
+router.get('/detail/:id', productsController.detail)
+
 router.patch('/detail/:id',productsController.update);
+
+
 
 
 
