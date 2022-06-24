@@ -13,6 +13,8 @@ List all products
 
 parameters: 
 
+Req
+
 {
 
   "name": "example name",
@@ -22,6 +24,50 @@ parameters:
   "image": "http://url/example"
 
 }
+
+Res
+
+[Partial-Update](https://deploy-test-jun-2022.herokuapp.com/api/v1/products/detail/)
+
+Request: 
+
+{
+
+  "name": "edit-name"
+
+}
+
+Response:
+
+{
+
+  "product": {
+
+​    "id": id,
+
+​    "name": "edit-name",
+
+​    "price": 410,
+
+​    "image": "https://loremflickr.com/640/480"
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
