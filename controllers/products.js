@@ -56,6 +56,13 @@ let productsController = {
           message: error.message
         })
       }
+    },
+    delete: async (req,res)=>{
+      const {id } = req.params;
+      const rta = await service.delete(id);
+      res.json(
+        rta
+      )
     }
 }
 module.exports = productsController;

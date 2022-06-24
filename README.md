@@ -55,6 +55,40 @@ Response:
 
 }
 
+[Detail](https://deploy-test-jun-2022.herokuapp.com/api/v1/products/detail/)
+
+Request:
+
+https://deploy-test-jun-2022.herokuapp.com/api/v1/products/detail/id
+
+Response:
+
+{
+
+  "id": id,
+
+  "name": "some name",
+
+  "price": 210,
+
+  "image": "https://loremflickr.com/640/480"
+
+}
+
+[Delete](https://deploy-test-jun-2022.herokuapp.com/api/v1/products/delete/id)
+
+Request:
+
+https://deploy-test-jun-2022.herokuapp.com/api/v1/products/delete/id
+
+Response:
+
+{
+
+  "id": id
+
+}
+
 
 
 
