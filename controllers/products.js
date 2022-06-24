@@ -16,6 +16,24 @@ let productsController = {
       }
       )
       
+    },
+    update: async function(req,res){
+      try {
+        const { id } = req.params;
+        const body = req.body;
+        const product = await service.update(id,body);
+        res.json(
+          {
+            product
+          }
+        )
+    
+      } catch (error) {
+        console.log(error.message)
+        res.status(404).json({
+          message: error.message
+        })
+      }
     }
 }
 module.exports = productsController;
