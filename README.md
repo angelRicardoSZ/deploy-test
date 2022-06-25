@@ -142,6 +142,10 @@ Response:
 
 To manage the errors, [BOOM](https://hapi.dev/module/boom/api/?v=9.1.4) is used, this API provides a set of utilities for returning HTTPs errors. 
 
+## Validation
+
+The data validation is made with [Joi](https://joi.dev/) 
+
 
 
 

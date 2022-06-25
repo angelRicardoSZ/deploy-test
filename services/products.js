@@ -48,7 +48,7 @@ class ProductsServices {
     if (product.isBlock) {
       throw boom.conflict("product is block")
     }
-    return this.products[index]
+    return product
 
   }
 
