@@ -39,7 +39,7 @@ let productsController = {
       // }
     
     },
-    update: async function(req,res){
+    update: async function(req,res,next){
       try {
         const { id } = req.params;
         const body = req.body;
@@ -51,10 +51,7 @@ let productsController = {
         )
     
       } catch (error) {
-        console.log(error.message)
-        res.status(404).json({
-          message: error.message
-        })
+        next(error)
       }
     },
     delete: async (req,res)=>{

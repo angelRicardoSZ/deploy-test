@@ -8,7 +8,7 @@ const router = express.Router();
 
 var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/products');
-
+const { logErrors,errorHandler,boomErrorHandler } = require("./middlewares/errorHandle")
 var app = express();
 
 // view engine setup
@@ -24,9 +24,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter);
 // app.use('/products', productsRouter);
 app.use(cors())
+
 app.use("/api/v1", router)
 router.use('/', indexRouter);
 router.use("/products", productsRouter)
+
+app.use(logErrors);
+app.use(boomErrorHandler)
+app.use(errorHandler)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
